@@ -3,6 +3,7 @@ package com.org.yuvaan.bank.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 @Data  // Lombok annotation to generate getters, setters, toString, equals, and hashCode
 @NoArgsConstructor  // Generates a no-argument constructor
@@ -13,7 +14,7 @@ public class CustomerPersonalDetailsEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -23,7 +24,7 @@ public class CustomerPersonalDetailsEntity {
 
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)
-    private Date dob;
+    private LocalDate dob;
 
     @Column(name = "phone_number", unique = true, nullable = false)
     private String phoneNumber;

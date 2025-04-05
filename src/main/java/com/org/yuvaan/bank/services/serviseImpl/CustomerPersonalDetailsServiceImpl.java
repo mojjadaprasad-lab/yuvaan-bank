@@ -6,6 +6,8 @@ import com.org.yuvaan.bank.services.CustomerPersonalDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerPersonalDetailsServiceImpl implements CustomerPersonalDetailsService {
 @Autowired
@@ -16,7 +18,7 @@ private CustomerPersonalDetailsRepository customerPersonalDetailsRepository;
     }
 
     @Override
-    public CustomerPersonalDetailsEntity getCustomerDetails(CustomerPersonalDetailsEntity customerPersonalDetailsEntity) {
-        return null;
+    public List<CustomerPersonalDetailsEntity> getCustomerDetails() {
+        return customerPersonalDetailsRepository.findAll();
     }
 }
