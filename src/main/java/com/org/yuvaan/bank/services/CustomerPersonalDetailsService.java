@@ -5,4 +5,5 @@ import com.org.yuvaan.bank.repository.CustomerPersonalDetailsRepository;
 
 public interface CustomerPersonalDetailsService {
     CustomerPersonalDetailsEntity saveCustomerDetails(CustomerPersonalDetailsEntity customerPersonalDetailsEntity);
+    CustomerPersonalDetailsEntity getCustomerDetails(CustomerPersonalDetailsEntity customerPersonalDetailsEntity);
 }

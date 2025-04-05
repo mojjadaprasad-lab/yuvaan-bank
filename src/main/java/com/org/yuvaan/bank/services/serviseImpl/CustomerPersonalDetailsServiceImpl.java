@@ -14,4 +14,9 @@ private CustomerPersonalDetailsRepository customerPersonalDetailsRepository;
     public CustomerPersonalDetailsEntity saveCustomerDetails(CustomerPersonalDetailsEntity customerPersonalDetailsEntity) {
         return  customerPersonalDetailsRepository.save(customerPersonalDetailsEntity);
     }
+
+    @Override
+    public CustomerPersonalDetailsEntity getCustomerDetails(CustomerPersonalDetailsEntity customerPersonalDetailsEntity) {
+        return null;
+    }
 }
